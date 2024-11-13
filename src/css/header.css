@@ -1,0 +1,98 @@
+.header {
+
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+    box-shadow: 1px 1px 15px 1px #ffffff;
+    position: relative;
+
+}
+
+.header .logo {
+
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.header .logo .image-logo{
+
+width: 50%;
+display: flex;
+justify-content: flex-end;
+padding-right: 7%;
+
+}
+
+.header .logo .image-logo img{
+
+    width: 100%;
+    opacity: 0.4;
+
+}
+
+.header .logo .text-logo{
+
+    font-size: 33px;
+    opacity: 0.4;
+}
+
+.header .menu{
+    display: flex;
+    gap: 50px;
+}
+
+.header .menu .navegation {
+
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+
+}
+
+.header .menu-mobile{
+
+    display: none;
+
+}
+
+.header .menu .navegation-mobile{
+    width: 50px;
+    display: none;
+}
+
+.header .menu .navegation-mobile .icon-menu{
+    display: none;
+    z-index: 1;
+}
+
+.header .menu .navegation .item{
+
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+
+
+}
+
+.header .logo:hover .image-logo img{
+    transition: 1s ease-in-out;
+    opacity: 0.9;
+}
+
+.header .logo:hover .text-logo{
+    transition: 1s ease-in-out;
+    opacity: 0.8;
+}
+
+.header .navegation .item:hover{
+    transition: 1s ease-in-out;
+    text-shadow: 1px 1px 10px #ffffff;
+
+}

@@ -1,0 +1,44 @@
+.body {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: star-wars;
+    position: relative;
+
+}
+
+.body .menu-mobile {
+    transition: 1s ease-in-out;
+    position: absolute;
+    width: 0vw;
+    height: 0vh;
+    right: 0%;
+
+}
+
+.background-menu-mobile{
+
+    transition: 3s ease-in-out;
+    background-color: var(--background-menu-mobile);
+    opacity: 0.3;
+}
+
+
+
+.container {
+
+    margin: 2%;
+    width: 95%;
+    border-radius: 10px;
+    height: 100vh;
+    background-image: var(--background-container);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 1px 5px 5px #ffffff;
+}

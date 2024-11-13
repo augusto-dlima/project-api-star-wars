@@ -1,0 +1,24 @@
+.toggler-theme{
+
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    opacity: 0.4;
+
+
+}
+
+.header .menu .toggler-theme:hover{
+
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    background-color:var(--background-btn-toggler-hover);
+    box-shadow: 1px 1px 15px 1px #ffffff;
+
+}
