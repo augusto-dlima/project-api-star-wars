@@ -1,20 +1,11 @@
-@media(max-width:1200px){
-
-
-
-}
 
 
 @media(max-width:1025px){
 
-    .header .logo {
 
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        color: #ffffff;
+    .header .logo .text-logo img{
+   
+        width: 100%;
     }
 
     
@@ -23,6 +14,10 @@
 
 @media(max-width: 768px){
 
+    .header .logo .text-logo img{
+   
+        width: 120%;
+    }
 
     .header .menu .navegation {
         gap:30px;
@@ -32,21 +27,6 @@
         font-size: 18px;
     }
 
-    .toggler-theme{
-
-        width: 26px;
-        height: 26px;
-    
-    }
-
-    .header .logo .text-logo{
-
-        font-size: 20px;
-        opacity: 0.4;
-    }
-
-
-    
 }
 
 @media(max-width: 500px){
@@ -57,12 +37,6 @@
         height: 100vh;
         right: 0%;
      
-    }
-
-
-    .header{
-
-        justify-content: space-between;
     }
 
     .header .logo{
@@ -98,9 +72,11 @@
 
 
     .header .menu  {
+        width: 35vw;
+        height: 100vh; 
         font-size: 13px;
         position: absolute;
-        right: 5%;
+        right: 0%;
         top: 30%;
         flex-direction: column;
         align-items: center;
@@ -113,7 +89,9 @@
         font-size: 13px;
         flex-direction: column;
         gap: 1px;
+        opacity: 1;
         display: none;
+     
     }
     
     .header .menu .navegation .item{
@@ -126,14 +104,17 @@
 
     .toggler-theme{
 
-        width: 28px;
-        height: 28px;
         margin-top: 50px;
         opacity: 1;
         z-index: 1;
         display: none;
     
     }
+
+    .toggler-theme .btn-toggler{
+        font-size: 11px;
+    }
+    
     
     .container {
 

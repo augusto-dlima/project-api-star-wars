@@ -9,7 +9,8 @@ function toggleMenuMobile() {
 
     if (displayMobileMenu === false) {
 
-        itemsMenuMobile.style.cssText = "display:flex;transition: 5s ease-in-out;"
+        itemsMenuMobile.style.cssText = "display:flex;"
+        themeToggler.style.cssText = "display:flex;"
 
         displayMobileMenu = true;
 

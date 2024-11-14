@@ -14,9 +14,12 @@
 
 }
 
+.toggler-theme .btn-toggler{
+    font-size: 18px;
+}
+
 .header .menu .toggler-theme:hover{
 
-    transition: 0.5s ease-in-out;
     opacity: 1;
     background-color:var(--background-btn-toggler-hover);
     box-shadow: 1px 1px 15px 1px #ffffff;
