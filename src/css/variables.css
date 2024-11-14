@@ -4,7 +4,7 @@
     --background-btn-toggler-hover: #00bf63;
     --background-container: url('../images/background-container.png');
     --background-menu-mobile: #3d85c6; ; 
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
 
 }
 
@@ -14,7 +14,7 @@
     --background-btn-toggler-hover: #cc0000;
     --background-container: url('../images/background-container.png');
     --background-menu-mobile: #00bf63;
-    transition: 1s ease-in-out;
+    transition: 0.5 ease-in-out;
 
 }
 
@@ -24,7 +24,7 @@
     --background-btn-toggler-hover: #3d85c6;
     --background-container: url('../images/background-container-red.png');
     --background-menu-mobile: #cc0000;
-    transition: 1s ease-in-out;
+    transition: 0.5 ease-in-out;
 
 }
 

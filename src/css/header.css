@@ -2,14 +2,16 @@
 
     width: 100%;
     min-height: 100px;
-    max-height: 130px;
+    max-height: 100px;
     display: flex;
     justify-content: space-between;
-    padding: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
     align-items: center;
     border-bottom: 1px solid white;
     box-shadow: 1px 1px 15px 1px #ffffff;
     position: relative;
+    /* background-color: blue; */
 
 }
 
@@ -18,8 +20,10 @@
     width: 25%;
     height: 100%;
     display: flex;
+    padding-left: 2%;
+    justify-content: center;
     cursor: pointer;
-    color: #ffffff;
+    /* background-color: blueviolet; */
 }
 
 .header .logo .image-logo{
@@ -27,15 +31,16 @@
 width: 50%;
 height: 100%;
 display: flex;
-justify-content: center;
-padding-right: 7%;
+justify-content: flex-end;
+/* padding-right: 7%; */
 
 }
 
 .header .logo .image-logo img{
 
-    width: 70%;
+    width: 90%;
     opacity: 1;
+    /* background-color: aqua; */
 
 }
 
@@ -43,22 +48,26 @@ padding-right: 7%;
 
 
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     width: 50%;
     height: 100%;
     opacity: 0.4;
+    /* background-color: azure; */
     
 }
 
 .header .logo .text-logo img{
    
     width: 80%;
+    /* background-color: black; */
 }
 
 
 .header .menu{
     display: flex;
     gap: 50px;
+    padding-right: 2%;
 }
 
 .header .menu .navegation {

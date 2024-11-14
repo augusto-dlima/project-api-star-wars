@@ -53,7 +53,7 @@
 
 
     .body .menu-mobile {
-        width: 45vw;
+        width: 35vw;
         height: 100vh;
         right: 0%;
      
@@ -63,7 +63,6 @@
     .header{
 
         justify-content: space-between;
-        padding: 5%;
     }
 
     .header .logo{
@@ -71,6 +70,10 @@
         width: 40%;
     }
 
+    .header .logo .text-logo img{
+   
+        width: 120%;
+    }
 
     .header .menu .navegation-mobile{
         display: flex;
@@ -92,8 +95,6 @@
         }
         
     } 
-
- 
 
 
     .header .menu  {
@@ -133,8 +134,6 @@
         display: none;
     
     }
-
-
     
     .container {
 
