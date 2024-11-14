@@ -1,8 +1,9 @@
 import { themeToggler, btnMenuMobile, content } from "./variables.js";
-import { togglerTheme } from "./toggler-theme.js";
+import { togglerTheme, getThemeLocalStorage } from "./toggler-theme.js";
 import { toggleMenuMobile, menuMobileOff} from "./toggler-menu-mobile.js";
 
 
+getThemeLocalStorage();
 
 themeToggler.addEventListener('click', () => {togglerTheme();});
 

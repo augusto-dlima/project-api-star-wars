@@ -1,47 +1,100 @@
-import { theme, logoImage, logoYoda, LogoDarthe, LogoDefault} from "./variables.js"
+import { theme, logoImage, logoYoda, LogoDarth, LogoDefault } from "./variables.js"
+const themeLocal = localStorage.getItem('theme');
+
+function getThemeLocalStorage(){
 
 
-function togglerTheme(){
+    if(themeLocal===null){
     
-    
-    if(theme.classList.contains('theme-default')){
-        
-        removeTheme('theme-default');
-        addTheme('theme-green')
-        logoImage.innerHTML =`<img src = ${logoYoda} alt=""/>`
-        
-    }
-    
-    else if(theme.classList.contains('theme-green')){
-        
-        removeTheme('theme-green');
-        addTheme('theme-red');
-        logoImage.innerHTML =`<img src = ${LogoDarthe} alt=""/>`
+        addThemeDefault()
     }
     
     else{
-        
-        removeTheme('theme-red');
-        addTheme('theme-default')
-        logoImage.innerHTML =`<img src = ${LogoDefault} alt="imagem de logo" />`
-        
+    
+        getTheme(themeLocal)
     }
     
-    
+
 }
 
-function removeTheme(colorTheme){
-    
+function addThemeDefault() {
+
+    theme.classList.add('theme-default');
+    localStorage.setItem('theme', 'theme-default');
+
+}
+
+function getTheme(themeLocal) {
+
+    if (themeLocal === 'theme-default') {
+
+        addTheme(themeLocal);
+          logoImage.innerHTML = `<img src = ${LogoDefault} alt="imagem de logo" />`
+
+    }
+
+    else if (themeLocal === 'theme-green') {
+
+        addTheme(themeLocal);
+         logoImage.innerHTML = `<img src = ${logoYoda} alt=""/>`
+
+    }
+
+    else {
+
+        addTheme(themeLocal);
+          logoImage.innerHTML = `<img src = ${LogoDarth} alt=""/>`
+
+    }
+
+
+
+}
+
+function togglerTheme() {
+
+
+    if (theme.classList.contains('theme-default')) {
+
+        removeTheme('theme-default');
+        addTheme('theme-green')
+        localStorage.setItem('theme', 'theme-green');
+        logoImage.innerHTML = `<img src = ${logoYoda} alt=""/>`
+
+    }
+
+    else if (theme.classList.contains('theme-green')) {
+
+        removeTheme('theme-green');
+        addTheme('theme-red');
+        localStorage.setItem('theme', 'theme-red');
+        logoImage.innerHTML = `<img src = ${LogoDarth} alt=""/>`
+    }
+
+    else {
+
+        removeTheme('theme-red');
+        addTheme('theme-default')
+        localStorage.setItem('theme', 'theme-default');
+        logoImage.innerHTML = `<img src = ${LogoDefault} alt="imagem de logo" />`
+
+    }
+
+
+}
+
+function removeTheme(colorTheme) {
+
     theme.classList.toggle(colorTheme);
-    
+
 }
 
-function addTheme(colorTheme){
-    
+function addTheme(colorTheme) {
+
     theme.classList.toggle(colorTheme);
 }
 
 
 
 
-export{togglerTheme}
+export { togglerTheme, getThemeLocalStorage}
