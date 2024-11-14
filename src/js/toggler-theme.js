@@ -1,8 +1,4 @@
-import { theme, logoImage, logoYoda, LogoDarthe, LogoDefault,menuMobile,themeToggler,itemsMenuMobile} from "./variables.js"
-
-
-let displayMobileMenu = false;
-
+import { theme, logoImage, logoYoda, LogoDarthe, LogoDefault} from "./variables.js"
 
 
 function togglerTheme(){
@@ -48,32 +44,4 @@ function addTheme(colorTheme){
 
 
 
-function toggleMenuMobile(){
-
-    console.log(themeToggler.style.cssText="display:flex;")
-
-    menuMobile.classList.toggle('background-menu-mobile');
-
-    if(displayMobileMenu===false){
-
-        itemsMenuMobile.style.cssText = "display:flex;transition: 5s ease-in-out;"
-      
-        displayMobileMenu=true;
-
-    }
-
-    else{
-
-        itemsMenuMobile.style.display='none';
-        themeToggler.style.display='none';
-        displayMobileMenu=false;
-
-
-    }
-    
-    
-}
-
-
-
-export{togglerTheme, toggleMenuMobile}
+export{togglerTheme}

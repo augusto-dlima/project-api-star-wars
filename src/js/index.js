@@ -1,17 +1,12 @@
-import { themeToggler, btnMenuMobile, menuMobile, theme } from "./variables.js";
-import { togglerTheme, toggleMenuMobile } from "./toggler.js";
+import { themeToggler, btnMenuMobile, content } from "./variables.js";
+import { togglerTheme } from "./toggler-theme.js";
+import { toggleMenuMobile, menuMobileOff} from "./toggler-menu-mobile.js";
 
 
 
-themeToggler.addEventListener('click', () => {
-    togglerTheme();
-})
+themeToggler.addEventListener('click', () => {togglerTheme();});
 
-btnMenuMobile.addEventListener('click', () => { toggleMenuMobile()
+btnMenuMobile.addEventListener('click', () => { toggleMenuMobile();});
 
-    // menuMobile.style.backgroundColor = '#ffffff';
-
-    // menuMobile.classList.toggle('background-menu-mobile')
-
-})
+content.addEventListener('click',()=>{menuMobileOff()});
 
