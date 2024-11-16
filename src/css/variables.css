@@ -11,7 +11,7 @@
 .theme-green {
 
     --background-image: url('../images/background-green.png');
-    --background-btn-toggler-hover: #cc0000;
+    --background-btn-toggler-hover: #000000;
     --background-container: url('../images/background-container.png');
     --background-menu-mobile: #00bf63;
     transition: 5ms ease-in-out;
@@ -23,7 +23,8 @@
     --background-image: url('../images/background-red.png');
     --background-btn-toggler-hover: #3d85c6;
     --background-container: url('../images/background-container-red.png');
-    --background-menu-mobile: #cc0000;
+    --background-menu-mobile: #000000;
+    /* --background-menu-mobile: #cc0000; */
     transition: 5ms ease-in-out;
 
 }
