@@ -1,127 +1,138 @@
 
-@media(max-width:1025px){
+@media(max-width: 768px) {
 
+    .header .logo .text-logo img {
 
-    .header .logo .text-logo img{
-   
-        width: 100%;
-    }
-
-    
-}
-
-
-@media(max-width: 768px){
-
-    .header .logo .text-logo img{
-   
         width: 120%;
     }
 
     .header .menu .navegation {
-        gap:30px;
+        gap: 30px;
     }
 
-    .header .menu .navegation .item{
+    .header .menu .navegation .item {
         font-size: 18px;
     }
 
 }
 
-@media(max-width: 500px){
+@media(max-width: 500px) {
 
+    .body{
+        height: 100%;
+    }
 
     .body .menu-mobile {
         width: 35vw;
-        height: 100vh;
+        height: 100%;
         right: 0%;
-     
+
     }
 
-    .header .logo{
+    .header .logo {
 
-        width: 40%;
+        width: 50%;
+        height: 50%;
     }
 
-    .header .logo .text-logo img{
-   
-        width: 120%;
+    .header .logo .image-logo img{
+        width: 100%;
     }
 
-    .header .menu .navegation-mobile{
+    .header .logo .text-logo  {
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .header .logo .text-logo img  {
+
+        width: 70%;
+
+    }
+
+    .header .menu .navegation-mobile {
         display: flex;
     }
 
-     .header .menu .navegation-mobile .icon-menu{
-         
-         display: flex;
+    .header .menu .navegation-mobile .icon-menu {
+
+        display: flex;
         color: #ffffff;
         cursor: pointer;
-        font-size: 40px;
+        font-size: 35px;
         opacity: 0.4;
 
-        &:hover{
+        &:hover {
 
-          transition: 1s ease-in-out;  
-          opacity: 1;
+            transition: 1s ease-in-out;
+            opacity: 1;
 
         }
-        
-    } 
 
-
-    .header .menu  {
-        width: 35vw;
-        height: 100vh; 
-        font-size: 13px;
-        position: absolute;
-        right: 0%;
-        top: 30%;
-        flex-direction: column;
-        align-items: center;
-        gap: 1px;
- 
     }
 
 
-    .header .menu .navegation  {
+    .header .menu {
+        width: 35vw;
+        height: 100vh;
+        font-size: 13px;
+        position: absolute;
+        right: 0%;
+        top: 35%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+
+    }
+
+
+    .header .menu .navegation {
         font-size: 13px;
         flex-direction: column;
         gap: 1px;
         opacity: 1;
         display: none;
-     
+
     }
-    
-    .header .menu .navegation .item{
-        
+
+    .header .menu .navegation .item {
+
         padding-top: 20px;
         text-align: center;
         z-index: 1;
 
     }
 
-    .toggler-theme{
+    .toggler-theme {
 
         margin-top: 50px;
         opacity: 1;
         z-index: 1;
         display: none;
-    
+
     }
 
-    .toggler-theme .btn-toggler{
+    .toggler-theme .btn-toggler {
         font-size: 11px;
     }
-    
-    
+
+
     .container {
 
- 
+
         width: 95%;
-        border-radius:2px;
+        border-radius: 2px;
         box-shadow: 0px 1px 10px 1px #ffffff;
     }
 
-    
+
+    .body .container .home{
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
 }

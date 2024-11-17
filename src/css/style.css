@@ -36,9 +36,9 @@
 
     margin: 2%;
     padding: 0.5%;
-    width: 95%;
-    border-radius: 10px;
+    width: 90%;
     height: 100vh;
+    border-radius: 10px;
     background-image: var(--background-container);
     background-repeat: no-repeat;
     background-size: cover;
