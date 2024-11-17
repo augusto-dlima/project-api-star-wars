@@ -1,0 +1,63 @@
+.home {
+
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: 41.5vh 30vh;
+    gap: 1%;
+}
+
+.movies,
+.characters,
+.starchips {
+
+    background-image: var(--background-section-home);
+    border-radius: 2%;
+
+}
+
+.movies {
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+.characters {
+
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+
+}
+
+.starchips {
+
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+
+}
+
+.home .content {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+
+}
+
+.home .content .title {
+
+    color: #ffffff;
+    font-size: 22px;
+
+}
+
