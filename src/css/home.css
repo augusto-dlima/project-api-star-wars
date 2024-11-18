@@ -5,7 +5,7 @@
     height: 100%;
     padding: 1%;
     grid-template-columns: repeat(4, 20%);
-    grid-template-rows: repeat(3,33%);
+    grid-template-rows: repeat(3, 33%);
     gap: 1%;
 }
 
@@ -55,36 +55,151 @@
     flex-wrap: wrap;
     padding: 2%;
 
+    > .container-title .title{
+
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    >.container-content{
+
+        display: flex;
+        width: 100%;
+        padding: 2%;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.5%;
+
+
+        >.movie,.character,.starchip .title{
+
+            text-align: center;
+            font-size: 13px;
+            color: #ffffff;
+        }
+
+
+            >.container-button{
+
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 4%;
+                padding-right: 8%;
+
+            }
+
+
+    }
+
+    >.container-button{
+
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 4%;
+        padding-right: 8%;
+
+    }
 }
 
-.home .content .title {
+.home .characters .content{
+
+  > .container-content{
+
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 5%;
+
+        >.character{
+
+            display: flex;
+            width: 45%;
+            padding: 1%;
+            justify-content: flex-start;
+            align-items: center;
+
+            >.image{
+
+                width: 60px;
+                height: 60px;
+
+            }
+
+            >.title{
+
+                padding-left: 3%;
+            }
+
+        }
+    }
+}
+
+.home .starchips .content {
+
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+
+    >.container-title {
+        width: 100%;
+        height: 25%;
+    }
+
+    >.container-content {
+
+        width: 100%;
+        height: 75%;
+        padding: 0.9%;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+
+        >.starchips {
+            display: flex;
+            justify-content: flex-start;
+            width: 80%;
+            gap: 10%;
+
+            > .starchip .image{
+                width: 50px;
+                height: 50px;
+
+                >img{
+
+                    border-radius: 50%;
+
+                }
+            }
+
+        }
+
+        >.container-button {
+            width: 20%;
+            text-align: center;
+
+        }
+    }
+
+}
+
+
+ .home .image img {
+    width: 100%;
+} 
+
+.home .characters .image img {
+    border-radius: 50%;
+}
+
+.home .content .container-button .btn-movie,
+.btn-character,
+.btn-starchip {
 
     color: #ffffff;
-    font-size: 22px;
+    cursor: pointer;
 
+    &:hover {
+        text-shadow: 1px 1px 5px #ffffff;
+
+    }
 }
-
-.home .container-content{
-    display: flex;
-    width: 100%;
-    padding: 2%;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0.5%;
-}
-
-.home .container-content .title{
-
-    text-align: center;
-    font-size: 13px;
-
-}
-
-.home .content .container-button{
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: flex-end;
-    padding-top:4%;
-    padding-right: 8%;
-}
-
