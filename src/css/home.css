@@ -1,50 +1,79 @@
-.home {
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Protest+Revolution&display=swap');
 
-    display: grid;
-    width: 100%;
-    height: 100%;
-    padding: 1%;
-    grid-template-columns: repeat(4, 20%);
-    grid-template-rows: repeat(3, 33%);
-    gap: 1%;
-}
 
 .movies,
 .characters,
-.starchips {
+.indications {
 
-    background-image: var(--background-section-home);
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.home .content .container-title {
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid var(--color-button-link);
+
+
+}
+
+.home .content .container-title .icon {
+    color: var(--color-button-link);
+    font-size: 30px;
+}
+
+.home .content .container-title .title {
+
+    color: #ffffff;
+    font-size: 30px;
+
+}
+
+.home .content .container-content {
+
+    display: flex;
+    width: 100%;
+    padding: 10% 2% 2% 2%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5%;
+
+}
+
+.home  .content .container-content .movie,.home .indications .content .container-content .movie {
+    display: flex;
+    width: 250px;
+    height: 430px;
+    flex-direction: column;
+    padding: 1%;
+    background-color: #ffffff;
     border-radius: 2%;
+    gap: 10px;
 
-}
+    &:hover {
 
-.movies {
-
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 4;
-
-}
-
-.characters {
-
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 3;
+        transition: 3ms ease-in-out;
+        cursor: pointer;
+        box-shadow: 5px 0px 50px 5px var(--color-button-link);
+    }
 
 
 }
 
-.starchips {
 
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 4;
+
+.home .content .container-button {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 4%;
+    padding-right: 8%;
 
 }
+
 
 .home .content {
 
@@ -56,154 +85,124 @@
     flex-wrap: wrap;
     padding: 2%;
 
-    > .container-title .title{
 
-        color: #ffffff;
-        font-size: 18px;
-    }
-
-    >.container-content{
-
-        display: flex;
-        width: 100%;
-        padding: 2%;
-        justify-content: space-around;
-        align-items: center;
-        gap: 0.5%;
-
-
-        >.movie,.character,.starchip .title{
-
-            text-align: center;
-            font-size: 13px;
-            color: #ffffff;
-        }
-
-
-            >.container-button{
-
-                display: flex;
-                justify-content: flex-end;
-                padding-top: 4%;
-                padding-right: 8%;
-
-            }
-
-
-    }
-
-    >.container-button{
-
-        display: flex;
-        justify-content: flex-end;
-        padding-top: 4%;
-        padding-right: 8%;
-
-    }
-}
-
-.home .characters .content{
-
-  > .container-content{
-
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        gap: 5%;
-
-        >.character{
-
-            display: flex;
-            width: 45%;
-            padding: 1%;
-            justify-content: flex-start;
-            align-items: center;
-
-            >.image{
-
-                width: 60px;
-                height: 60px;
-
-            }
-
-            >.title{
-
-                padding-left: 3%;
-            }
-
-        }
-    }
-}
-
-.home .starchips .content {
-
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-
-    >.container-title {
-        width: 100%;
-        height: 25%;
-    }
 
     >.container-content {
 
+        >.movie,
+        .character,
+        .starchip .title-film {
 
-        width: 100%;
-        padding: 0;
-        gap: 0;
-        justify-content: space-between;
-        align-items: center;
-
-        >.starchips {
-            display: flex;
-            justify-content: flex-start;
-           background-image: none;
-            width: 80%;
-            gap: 15%;
-
-            > .starchip .image{
-                width: 50px;
-                height: 50px;
-
-                >img{
-
-                    border-radius: 50%;
-
-                }
-            }
-
-        }
-
-        >.container-button {
-            width: 20%;
             text-align: center;
-            padding-left: 8%;
-
+            font-size: 13px;
+            color: #000000;
         }
+
+
     }
 
 }
 
+.home .characters .content .character {
 
- .home .image img {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    padding: 1% 1% 1% 1%;
+    margin: 1%;
+    gap: 5%;
+    align-items: center;
+    background-image: var(--background-section-home);
+    border-radius: 100px;
+    cursor: pointer;
+
+}
+
+.home .characters .content .character .image {
+    width: 70px;
+    height: 70px;
+    display: flex;
+}
+
+.home .characters .content .character {
+
+
+    &:hover {
+
+        box-shadow: 0.5px 0px 0.5px 0.5px #ffffff;
+    }
+
+}
+
+.home .characters .content .character .title-character {
+    color: #ffffff;
+    font-size: 22px;
+    padding-left: 3%;
+}
+
+
+
+.home .indications .content .container-content .movies {
+
+    display: flex;
+    justify-content: center;
+    background-image: none;
+    width: 80%;
+    gap: 15%;
+}
+
+
+.home .indications .content .container-content .movie .image{
     width: 100%;
-} 
+    /* height: 80%; */
+    background-color: aqua;
+    display: flex;
+}
+
+.home .indications .content .container-content .movie .image img{
+    width: 100%;
+}
+
+
+
+.home .indications .content {
+
+
+
+    >.container-button {
+        width: 20%;
+        text-align: center;
+        padding-left: 8%;
+
+    }
+}
+
+
+
+.home .image img {
+    width: 100%;
+}
+
+.home .movies .content .container-content .movie .image {
+
+    width: 100%;
+}
+
 
 .home .characters .image img {
-    border-radius: 50%;
+    width: 100%;
+    border-radius: 100%;
+    border: 1px solid white;
 }
+
+
 
 .home .content .container-button .btn-movie,
 .btn-character,
 .btn-starchip {
 
-    color: #ffffff;
+    color: var(--color-button-link);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 50px;
 
-    &:hover {
-        text-shadow: 1px 1px 5px #ffffff;
-
-    }
 }

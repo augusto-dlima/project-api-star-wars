@@ -1,7 +1,7 @@
 .body {
 
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,12 +35,12 @@
 .container {
 
     margin: 2%;
-    padding: 0.5%;
-    width: 90%;
-    height: 100vh;
-    border-radius: 10px;
+    padding: 2%;
+    width: 95%;
+    height: 100%;
+    /* border-radius: 10px; */
     background-image: var(--background-container);
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 5px 1px 5px 5px #ffffff;
+    box-shadow: 1px 1px 10px 1px #ffffff;
 }

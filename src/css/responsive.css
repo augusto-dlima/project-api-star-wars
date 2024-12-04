@@ -45,7 +45,6 @@
     }
 
 
-
     .header .logo .text-logo img {
 
         width: 200%;
@@ -72,14 +71,34 @@
         padding: 20px;
     }
 
-    .body .container .home .movies,
-    .characters,
-    .starchips {
+
+    .body .container .home .content .container-title {
+
+        width: 50%;
+
+    }
+
+    .body .container .home .content .container-content .character {
+        width: 30%;
+        padding: 2%;
+        height: 250px;
+        border-radius: 10px;
+        flex-direction: column;
+
+    }
+
+    .home .characters .content .container-content .character .image {
+        width: 98%;
+        height: 60%;
         display: flex;
-        width: 100%;
+        /* background-color: aqua; */
     }
 
 
+    .home .characters .content .container-content .character .image img {
+        border-radius: 2%;
+        border: none;
+    }
 
 }
 
@@ -102,12 +121,13 @@
         height: 50%;
     }
 
-    .header .logo .image-logo  {
+    .header .logo .image-logo {
         width: 60%;
     }
 
     .header .logo .image-logo img {
-        width: 110%;
+        width: 80%;
+        height: 90%;
     }
 
     .header .logo .text-logo {
@@ -199,14 +219,38 @@
         border-radius: 2px;
         box-shadow: 0px 1px 10px 1px #ffffff;
     }
+  
 
-    .body .container .home .container-content {flex-wrap: wrap;}
 
-    .body .container .home .movies .content .container-content { gap: 40px; }
+}
 
-    .home .content .container-button .btn-movie,
+.body .container .home .container-content {
+    flex-wrap: wrap;
+}
+
+
+
+.body .container .home .characters .content .container-content .character .title-character {
+
+    font-size: 18px;
+}
+
+
+
+.body .container .home .movies .content .container-content {
+    gap: 40px;
+}
+
+.body .container .home .indications .content .container-content {
+    gap: 40px;
+}
+
+.body .container .home .content .container-content .character {
+    width: 40%;
+}
+
+.home .content .container-button .btn-movie,
 .btn-character,
-.btn-starchip {font-size: 100px;}
-
-
+.btn-starchip {
+    font-size: 100px;
 }
