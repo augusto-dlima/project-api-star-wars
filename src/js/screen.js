@@ -13,11 +13,6 @@ console.log(movieImageSimilar);
 const setMovieList = (movieList) => {
 
 
-    const titleSimilar = movieList[5].similarMovies.results;
-
-
-    console.log(titleSimilar);
-
     for (let index = 0; index < movieImage.length; index++) {
 
         movieImage[index].attributes[1].nodeValue = movieList[index].image;
@@ -33,25 +28,6 @@ const setMovieList = (movieList) => {
         characterTitle[index].innerText = `${movieList[index].castList[index].original_name} (${movieList[index].castList[index].character})`
 
     }
-
-    for (let index = 0; index < movieImageSimilar.length; index++) {
-
-
-      
-
-
-        let posterPath = titleSimilar[index].poster_path;
-
-
-            const urlImage = `https://image.tmdb.org/t/p/original${posterPath}`;
-
-            movieImageSimilar[index].attributes[1].nodeValue = urlImage;
-            moviesTitleSimilar[index].innerHTML = titleSimilar[index].title
-  
-
-
-    }
-
 
 
 }

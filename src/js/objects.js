@@ -4,12 +4,11 @@ let movie = {
     title: "",
     image: "",
     overView: "",
-    castList: [],
-    similarMovies:[]
+    castList: []
 }
 
 
-function newMovie(element,cast,similar) {
+function newMovie(element,cast) {
 
     const url =  `https://image.tmdb.org/t/p/original${element.poster_path}`
 
@@ -18,8 +17,7 @@ function newMovie(element,cast,similar) {
         title: element.title,
         image: url,
         overView: element.overview,
-        castList: cast,
-        similarMovies:similar
+        castList: cast
     }
 
     return movie;

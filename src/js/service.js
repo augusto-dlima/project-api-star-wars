@@ -23,13 +23,11 @@ async function getDataTmdb() {
   const json = await response.json();
 
 
-  json.parts.map(async (movieElement, index) => {
+  json.parts.map(async (movieElement) => {
 
     const cast = await getCastTmdb(movieElement.id);
-    const similar = await getReviewsMovie(movieElement.id);
 
-
-    const movie = newMovie(movieElement, cast, similar);
+    const movie = newMovie(movieElement, cast);
 
 
     movies.push(movie);
@@ -51,15 +49,35 @@ async function getCastTmdb(movieId) {
 
 }
 
+
+  // `https://api.themoviedb.org/3/movie/${movieId}/reviews?language=pt-BR&page=1`
+
+
+  //  `https://api.themoviedb.org/3/movie/${movieId}?language=pt-BR`
+    
+
+
 async function getReviewsMovie(movieId) {
 
-  const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/similar?language=pt-BR&page=1`, options);
+  const response = await fetch( `https://api.themoviedb.org/3/movie/${movieId}?language=pt-BR`, options);
 
   const json = await response.json();
 
-  return json;
+  console.log(json)
+
+  // return json;
 
 }
+
+// async function getReviewsMovie(movieId) {
+
+//   const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/similar?language=pt-BR&page=1`, options);
+
+//   const json = await response.json();
+
+//   return json;
+
+// }
 
 
 
