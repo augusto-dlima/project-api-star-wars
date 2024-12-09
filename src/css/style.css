@@ -37,7 +37,7 @@
     margin: 2%;
     padding: 2%;
     width: 95%;
-    height: 100%;
+    height: 100vh;
     background-image: var(--background-container);
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,16 +1,17 @@
+import { content } from "./variables.js";
+
 const sectionMovies = document.querySelector('.movies');
 const movieImage = document.getElementsByClassName('image-film');
 const moviesTitle = document.getElementsByClassName('title-film');
 const characterImage = document.getElementsByClassName('image-character');
 const characterTitle = document.getElementsByClassName('title-character');
-const movieImageSimilar = document.getElementsByClassName('image-film-similar');
-const moviesTitleSimilar = document.getElementsByClassName('title-film-similar');
-
-
-console.log(movieImageSimilar);
+const sectionHome = document.getElementsByClassName('home');
+const sectionLoading = document.getElementsByClassName('loading');
 
 
 const setMovieList = (movieList) => {
+
+    console.log(movieList)
 
 
     for (let index = 0; index < movieImage.length; index++) {
@@ -29,6 +30,15 @@ const setMovieList = (movieList) => {
 
     }
 
+    setTimeout(()=>{
+
+        sectionHome.home.style.display = 'block';
+        sectionLoading[0].style.display='none';
+        content.style.height='100%'
+
+    },3000)
+
+    
 
 }
 

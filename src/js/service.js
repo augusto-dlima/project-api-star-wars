@@ -13,29 +13,41 @@ const options = {
   }
 };
 
-//  'https://api.themoviedb.org/3/movie/movie_id/reviews?language=pt-BR&page=1' 
-
 
 async function getDataTmdb() {
 
+  const movieList =  JSON.parse(localStorage.getItem("movieList"));
 
-  const response = await fetch(urlMovies, options);
-  const json = await response.json();
+  if(!movieList){
 
+    const response = await fetch(urlMovies, options);
+    const json = await response.json();
+  
+  
+    json.parts.map(async (movieElement) => {
+  
+      const cast = await getCastTmdb(movieElement.id);
+  
+      const movie = newMovie(movieElement, cast);
+  
+  
+      movies.push(movie);
 
-  json.parts.map(async (movieElement) => {
+      localStorage.setItem("movieList", JSON.stringify(movies));
+  
+      json.parts.length === movies.length ? setMovieList(movies) : "";
+  
+  
+    })
 
-    const cast = await getCastTmdb(movieElement.id);
+  }
 
-    const movie = newMovie(movieElement, cast);
+  else{
 
+    setMovieList(movieList);
 
-    movies.push(movie);
+  }
 
-    json.parts.length === movies.length ? setMovieList(movies) : "";
-
-
-  })
 
 }
 
@@ -48,38 +60,6 @@ async function getCastTmdb(movieId) {
   return json.cast;
 
 }
-
-
-  // `https://api.themoviedb.org/3/movie/${movieId}/reviews?language=pt-BR&page=1`
-
-
-  //  `https://api.themoviedb.org/3/movie/${movieId}?language=pt-BR`
-    
-
-
-async function getReviewsMovie(movieId) {
-
-  const response = await fetch( `https://api.themoviedb.org/3/movie/${movieId}?language=pt-BR`, options);
-
-  const json = await response.json();
-
-  console.log(json)
-
-  // return json;
-
-}
-
-// async function getReviewsMovie(movieId) {
-
-//   const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/similar?language=pt-BR&page=1`, options);
-
-//   const json = await response.json();
-
-//   return json;
-
-// }
-
-
 
 
 export { getDataTmdb }
