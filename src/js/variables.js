@@ -9,7 +9,8 @@ const btnMenuMobile = document.querySelector('.icon-menu');
 const menuMobile = document.querySelector('.menu-mobile');
 const itemsMenuMobile = document.querySelector('.navegation');
 const content = document.querySelector('.container');
+const btnAddMovie = document.getElementsByClassName('btn-movie');
 
 
 
-export {themeToggler,theme, logoImage,LogoDefault,logoYoda,LogoDarth,btnMenuMobile,menuMobile,menuMobileBackgroundDefault,itemsMenuMobile, content}
+export {themeToggler,theme, logoImage,LogoDefault,logoYoda,LogoDarth,btnMenuMobile,menuMobile,menuMobileBackgroundDefault,itemsMenuMobile, content, btnAddMovie}

@@ -16,33 +16,42 @@ const options = {
 
 async function getDataTmdb() {
 
-  const movieList =  JSON.parse(localStorage.getItem("movieList"));
+  const movieList = JSON.parse(localStorage.getItem("movieList"));
 
-  if(!movieList){
+  if (!movieList) {
 
     const response = await fetch(urlMovies, options);
     const json = await response.json();
-  
-  
+
+
     json.parts.map(async (movieElement) => {
-  
+
+      console.log(movieElement)
+
       const cast = await getCastTmdb(movieElement.id);
-  
+
       const movie = newMovie(movieElement, cast);
-  
-  
+
       movies.push(movie);
 
-      localStorage.setItem("movieList", JSON.stringify(movies));
-  
-      json.parts.length === movies.length ? setMovieList(movies) : "";
-  
-  
+      
+      if(json.parts.length === movies.length ){
+        
+        const moviesChronologicalOrder = setChronologicalOrder(movies);
+
+        console.log(moviesChronologicalOrder);
+        
+        localStorage.setItem("movieList", JSON.stringify(moviesChronologicalOrder));
+
+        setMovieList(moviesChronologicalOrder);
+      }
+
+
     })
 
   }
 
-  else{
+  else {
 
     setMovieList(movieList);
 
@@ -58,6 +67,56 @@ async function getCastTmdb(movieId) {
   const json = await response.json();
 
   return json.cast;
+
+}
+
+
+function setChronologicalOrder(movieList) {
+
+  const movieListValidation = movieList;
+
+  let MoviesChronologicalOrder = [];
+  
+  movieList.map((movie) => {
+    
+    let indexList = 0;
+    const yearRelease = new Date(movie.releaseData).getFullYear();
+
+
+    for (let index = 0; index < movieList.length; index++) {
+
+      const yearReleaseValidation = new Date(movieListValidation[index].releaseData).getFullYear();
+
+
+      if (yearRelease > yearReleaseValidation) {
+
+       indexList === 0 ? indexList = 1 : indexList++;
+
+      }
+
+    }
+
+    let newMovie = {
+      index: indexList,
+      movie: movie
+    }
+
+    MoviesChronologicalOrder.push(newMovie);
+
+  })
+
+  console.log(MoviesChronologicalOrder);
+
+  for(let index = 0; index<movieList.length; index++){
+
+    const element = MoviesChronologicalOrder.filter((element) => element.index===index)
+
+    movieList.splice(index,1,element[0].movie);
+  }
+
+
+  return movieList;
+
 
 }
 

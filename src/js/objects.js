@@ -4,6 +4,7 @@ let movie = {
     title: "",
     image: "",
     overView: "",
+    releaseData: "",
     castList: []
 }
 
@@ -17,6 +18,7 @@ function newMovie(element,cast) {
         title: element.title,
         image: url,
         overView: element.overview,
+        releaseData: element.release_date,
         castList: cast
     }
 
