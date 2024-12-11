@@ -1,4 +1,4 @@
-import { content } from "./variables.js";
+import { content, btnAddMovie } from "./variables.js";
 
 const sectionMovies = document.querySelector('.movies');
 const movieImage = document.getElementsByClassName('image-film');
@@ -41,43 +41,88 @@ const setMovieList = (movieList) => {
 
 }
 
-function addMoviesHome() {
-
-
-    sectionHome.home.style.display = 'none';
-    sectionLoading[0].style.display = 'flex';
-    content.style.height = '100vh'
-
-
+function setMoviesHome() {
+    
+    
     const movieList = JSON.parse(localStorage.getItem("movieList"));
     let contentMovies = setMovies[0];
     let index = movieImage.length;
 
+    console.log(btnAddMovie[0].classList.contains('btn-rotae'));
+
+    if (btnAddMovie[0].classList.contains('btn-rotate')) {
 
 
-    for (index; index < movieList.length; index++) {
+        sectionHome.home.style.display = 'none';
+        sectionLoading[0].style.display = 'flex';
+        content.style.height = '100vh'
 
+        contentMovies.innerHTML = "";
 
-        contentMovies.innerHTML = contentMovies.innerHTML + `  <div class="movie">
+        for (index = 0; index < 3; index++) {
+    
+    
+            contentMovies.innerHTML = contentMovies.innerHTML + `  <div class="movie">
+    
+            <div class="image">
+    
+    
+                <img class="image-film" src="https://placehold.co/150x200" alt="">
+    
+            </div>
+    
+            <p class="title-film">titulo 3</p>
+    
+        </div> `
+    
+    
+        }
 
-        <div class="image">
+        btnAddMovie[0].classList.toggle('btn-rotate')
+    
+        setMovieList(movieList);
 
-
-            <img class="image-film" src="https://placehold.co/150x200" alt="">
-
-        </div>
-
-        <p class="title-film">titulo 3</p>
-
-    </div> `
 
 
     }
 
-    setMovieList(movieList);
+    else {
+
+        sectionHome.home.style.display = 'none';
+        sectionLoading[0].style.display = 'flex';
+        content.style.height = '100vh'
+    
+    
+        for (index; index < movieList.length; index++) {
+    
+    
+            contentMovies.innerHTML = contentMovies.innerHTML + `  <div class="movie">
+    
+            <div class="image">
+    
+    
+                <img class="image-film" src="https://placehold.co/150x200" alt="">
+    
+            </div>
+    
+            <p class="title-film">titulo 3</p>
+    
+        </div> `
+    
+    
+        }
+    
+        btnAddMovie[0].classList.toggle('btn-rotate')
+    
+        setMovieList(movieList);
+
+
+    }
+
+
 
 
 }
 
 
-export { setMovieList, addMoviesHome }
+export { setMovieList, setMoviesHome }

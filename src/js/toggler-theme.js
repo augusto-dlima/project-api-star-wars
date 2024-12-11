@@ -1,49 +1,49 @@
 import { theme, logoImage, logoYoda, LogoDarth, LogoDefault } from "./variables.js"
 const themeLocal = localStorage.getItem('theme');
 
-function getThemeLocalStorage(){
+function getThemeLocalStorage() {
 
 
-    if(themeLocal===null){
-    
+    if (themeLocal === null) {
+
         addThemeDefault()
     }
-    
-    else{
-    
+
+    else {
+
         getTheme(themeLocal)
     }
-    
+
 
 }
 
 function addThemeDefault() {
 
-    theme.classList.add('theme-default');
-    localStorage.setItem('theme', 'theme-default');
+    theme.classList.add('theme-red');
+    localStorage.setItem('theme', 'theme-red');
 
 }
 
 function getTheme(themeLocal) {
 
-    if (themeLocal === 'theme-default') {
+    if (themeLocal === 'theme-red') {
 
         addTheme(themeLocal);
-          logoImage.innerHTML = `<img src = ${LogoDefault} alt="imagem de logo" />`
+        logoImage.innerHTML = `<img src = ${LogoDarth} alt=""/>`
 
     }
 
     else if (themeLocal === 'theme-green') {
 
         addTheme(themeLocal);
-         logoImage.innerHTML = `<img src = ${logoYoda} alt=""/>`
+        logoImage.innerHTML = `<img src = ${logoYoda} alt=""/>`
 
     }
 
     else {
 
         addTheme(themeLocal);
-          logoImage.innerHTML = `<img src = ${LogoDarth} alt=""/>`
+        logoImage.innerHTML = `<img src = ${LogoDefault} alt="imagem de logo" />`
 
     }
 
@@ -97,4 +97,4 @@ function addTheme(colorTheme) {
 
 
 
-export { togglerTheme, getThemeLocalStorage}
+export { togglerTheme, getThemeLocalStorage }

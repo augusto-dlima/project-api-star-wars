@@ -2,15 +2,12 @@ import { themeToggler, btnMenuMobile, content, btnAddMovie } from "./variables.j
 import { togglerTheme, getThemeLocalStorage } from "./toggler-theme.js";
 import { toggleMenuMobile, menuMobileOff} from "./toggler-menu-mobile.js";
 import { getDataTmdb } from "./service.js";
-import { addMoviesHome } from "./screen.js";
-
-console.log(btnAddMovie);
+import { setMoviesHome } from "./screen.js";
 
 
 btnAddMovie[0].addEventListener('click',()=>{
 
-
-    addMoviesHome();
+    setMoviesHome();
 
 })
 
