@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="./src/css/responsive.css">
     <link rel="stylesheet" href="./src/css/home.css">
     <link rel="stylesheet" href="./src/css/loading.css">
-
-    <!-- <link rel="stylesheet" href="path/to/starwars-glyphicons/css/starwars-glyphicons.css"> -->
+    <link rel="stylesheet" href="./src/css/movie-details.css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -34,7 +33,7 @@
 
             </div>
 
-            <div class="text-logo">
+            <div id="header-logo" class="text-logo">
 
                 <img src="./src/images/logo-star-wars.png" alt="imagem texto star wars">
 
@@ -65,8 +64,6 @@
 
 
     </header>
-
-    <!-- <div class="menu-mobile"></div> -->
 
 
     <div class="container">
@@ -133,16 +130,15 @@
                             <p class="title-film">titulo 3</p>
 
                         </div>
-                        
 
-                        
+
+
 
 
                     </div>
 
                     <div class="container-button">
 
-                        <!-- <p class="btn-movie"><i class="fas fa-arrow-circle-right"></i></p> -->
                         <p class="btn-movie"><i class="fas fa-caret-down"></i></p>
 
 
@@ -162,7 +158,7 @@
 
                     <div class="container-title">
 
-                        <h1 class="title">ELENCO</h1>
+                        <h1 class="title">PERSONAGENS PRINCIPAIS</h1>
                         <i class="fas fa-users icon"></i>
                     </div>
 
@@ -244,6 +240,115 @@
 
 
             </section>
+
+
+        </section>
+
+        <section class="movie-details">
+
+            <i class="fas fa-arrow-left icon-home"></i>
+
+            <div class="content">
+
+                <div class="container-title">
+
+                    <i class="fas fa-film icon"></i>
+                    <h1 id="movie-details-title-film" class="title">FILMES</h1>
+
+                </div>
+
+                <div class="container-content">
+
+                    <div id="movie-details-background-movie" class="background-movie">
+
+
+                        <div class="movie-section">
+
+                            <div class="image">
+
+
+                                <img id="movie-details-image" class="image" src="https://placehold.co/150x200" alt="">
+
+                            </div>
+
+
+                        </div>
+
+                        <div class=" details">
+
+                            <div id="details-elements" class="details-elements">
+
+                                <div id="elements-movie" class="elements-movie">
+
+                                    <h1 class="title">Sinopse</h1>
+
+                                    <p id="movie-details-over-view" class="text">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Deserunt eveniet provident veniam molestiae, nisi dolor
+                                        eligendi
+                                        cupiditate libero beatae magnam ipsa! Error fugit iusto et adipisci laboriosam
+                                        ex
+                                        rerum officia!</p>
+
+                                    <h2 class="title">Gêneros</h2>
+
+                                    <p id="movie-details-genres" class="text">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit</p>
+
+                                        <div class="details-elements-inline">
+            
+                                            <div class="average">
+            
+                                                <span id="movie-details-average">8</span>
+                                                <i class="fas fa-award icon"></i>
+            
+                                            </div>
+            
+                                            <div class="cast">
+
+                                                <i id="btn-add-cast" class="fas fa-arrow-right icon-home"></i>
+            
+                                            </div>
+            
+                                        </div>
+
+
+                                </div>
+
+                                <div id="elements-cast" class="elements-cast">
+
+                                    <i  class="fas fa-arrow-left icon-home btn-movie-details-back"></i>
+
+                                </div>
+
+                                <section id="loading-movie" class="loading">
+
+                                    <i class="fab fa-galactic-republic icon"></i>
+                        
+                                    <p class="text">...</p>
+                        
+                                </section>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
 
 
         </section>

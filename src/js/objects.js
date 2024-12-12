@@ -5,11 +5,14 @@ let movie = {
     image: "",
     overView: "",
     releaseData: "",
+    backdropPath: "",
+    voteAverage:"",
+    genre:[],
     castList: []
 }
 
 
-function newMovie(element,cast) {
+function newMovie(element,cast,genres) {
 
     const url =  `https://image.tmdb.org/t/p/original${element.poster_path}`
 
@@ -19,6 +22,9 @@ function newMovie(element,cast) {
         image: url,
         overView: element.overview,
         releaseData: element.release_date,
+        backdropPath: element.backdrop_path,
+        voteAvarage: element.vote_average,
+        genre:genres,
         castList: cast
     }
 

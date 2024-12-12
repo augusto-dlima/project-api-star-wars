@@ -1,5 +1,5 @@
 import { newMovie } from "./objects.js";
-import { setMovieList } from "./screen.js";
+import { setMovieList, movieDetails } from "./screen.js";
 
 let movies = [];
 
@@ -29,8 +29,9 @@ async function getDataTmdb() {
       console.log(movieElement)
 
       const cast = await getCastTmdb(movieElement.id);
+      const genres = await detailsMovie(movieElement.id);
 
-      const movie = newMovie(movieElement, cast);
+      const movie = newMovie(movieElement, cast, genres);
 
       movies.push(movie);
 
@@ -67,6 +68,19 @@ async function getCastTmdb(movieId) {
   const json = await response.json();
 
   return json.cast;
+
+}
+
+async function detailsMovie(movieId) {
+
+  `https://api.themoviedb.org/3/movie/movie_id?language=pt-BR`
+
+
+
+  const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=pt-BR`, options);
+  const json = await response.json();
+
+  return json.genres;
 
 }
 
@@ -120,5 +134,22 @@ function setChronologicalOrder(movieList) {
 
 }
 
+function selectFilms(){
 
-export { getDataTmdb }
+  const movie = document.querySelectorAll('.movie');
+    
+  movie.forEach((Element)=>{
+      Element.addEventListener('click',()=>{
+
+          const titleFilm = Element.children[1].innerText;
+
+          movieDetails(titleFilm);
+
+
+      })
+  })
+
+}
+
+
+export { getDataTmdb, selectFilms }

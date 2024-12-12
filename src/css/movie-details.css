@@ -1,0 +1,138 @@
+.movie-details {
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+
+
+.movie-details .content .background-movie {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4%;
+    margin-top: 2%;
+    gap: 4%;
+
+    animation: visible-animation 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 70%;
+
+    /* &:hover {
+
+        transition: 3ms ease-in-out;
+        cursor: pointer;
+        box-shadow: 5px 0px 50px 5px var(--color-button-link);
+    } */
+
+
+}
+
+
+.movie-details .content .background-movie .details {
+
+    background-color: #000000;
+    width: 100%;
+    height: 290px;
+    border-radius: 1%;
+    opacity: 0.8;
+    position: relative;
+
+    &:hover {
+
+        .details-elements .elements-movie {
+            transition: 1s ease-in-out;
+            opacity: 1;
+        }
+
+        transition: 1s ease-in-out;
+        cursor: pointer;
+        box-shadow: 5px 0px 50px 5px var(--color-button-link);
+
+    }
+
+
+
+}
+
+.movie-details .content .background-movie .details .details-elements .elements-movie {
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    gap: 4%;
+    position: absolute;
+    opacity: 0.4;
+
+}
+
+.movie-details .content .background-movie .details .details-elements .loading {
+    display: none;
+    position: absolute;
+
+}
+
+.movie-details .content .container-title {
+
+
+    min-width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2%;
+    padding: 0;
+    margin: 5% 0% 8% 0%;
+    font-size: 20px;
+
+}
+
+.movie-details .content .details .details-elements .text {
+    font-size: 14px;
+}
+
+.movie-details .content .container-title .title {
+
+    color: #ffffff;
+    font-size: 30px;
+
+}
+
+
+.movie-details .content .details-elements .details-elements-inline {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-details .content .details-elements-inline .average {
+
+    width: 48px;
+    height: 48px;
+    font-size: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-image: var(--background-section-home);
+    border: 1px solid#ffffff;
+}
+
+.movie-details .content .details-elements-inline .average .icon {
+    position: absolute;
+    bottom: -10px;
+    right: -1px;
+    font-size: 20px;
+}
+
+.elements-cast{
+    display: none;
+}
+
