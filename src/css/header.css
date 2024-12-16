@@ -11,10 +11,6 @@
     align-items: center;
     border-bottom: 1px solid white;
     box-shadow: 1px 1px 15px 1px #ffffff;
-    position: relative;
-
-    font-family: death-star;
-
 
 }
 
@@ -37,8 +33,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 20px;
-    color: azure;
 }
 
 .header .logo .image-logo img {
@@ -86,15 +80,6 @@
 
 }
 
-.header .menu .navegation-mobile {
-    width: 50px;
-    display: none;
-}
-
-.header .menu .navegation-mobile .icon-menu {
-    display: none;
-    z-index: 1;
-}
 
 .header .menu .navegation .item {
 
