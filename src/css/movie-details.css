@@ -44,10 +44,12 @@
 
     &:hover {
 
-        .details-elements .elements-movie {
+        .details-elements .elements-movie,
+        .elements-cast {
             transition: 1s ease-in-out;
             opacity: 1;
         }
+
 
         transition: 1s ease-in-out;
         cursor: pointer;
@@ -59,16 +61,19 @@
 
 }
 
-.movie-details .content .background-movie .details .details-elements .elements-movie {
+.movie-details .content .background-movie .details .details-elements .elements-movie,
+.elements-cast {
     color: #ffffff;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2%;
+    padding: 3%;
     gap: 4%;
     position: absolute;
     opacity: 0.4;
+    cursor: auto;
+
 
 }
 
@@ -103,7 +108,8 @@
 }
 
 
-.movie-details .content .details-elements .details-elements-inline {
+.movie-details .content .details-elements .details-elements-inline,
+.cast-elements-inline {
     display: flex;
     width: 100%;
     height: 100%;
@@ -132,7 +138,64 @@
     font-size: 20px;
 }
 
-.elements-cast{
+.elements-cast {
     display: none;
+    padding: 1%;
+
+
 }
 
+.elements-cast .cast-elements-inline{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 85%;
+    padding: 2%;
+}
+
+.elements-cast .character {
+
+    width: 15%;
+    height: 90%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:center;
+    padding: 0;
+    margin: 0;
+    /* border-radius: 7%; */
+    background-image: none;
+    /* gap: 5%; */
+
+}
+
+.elements-cast .character:hover{
+    transition: 1s ease-in-out;
+    /* box-shadow: 1px 1px 10px 0px #ffffff; */
+}
+
+.elements-cast .character .image {
+
+    width: 100%;
+    height: 70%;
+    display: flex;
+
+}
+
+
+.btn-movie-details-back {
+    width: 0;
+    font-size: 18px;
+}
+
+.elements-cast .cast-elements-inline .icon-home {
+
+    font-size: 20px;
+    padding: 5%;
+
+}
+
+.elements-cast .cast-elements-inline .name-character-movie-details {
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}

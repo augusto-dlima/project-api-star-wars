@@ -12,9 +12,9 @@ const btnReturnMovieDetails = document.getElementsByClassName('btn-movie-details
 
 console.log(btnReturnMovieDetails);
 
-btnHome[0].addEventListener('click',()=>{returnHome();})
-btnCast[1].addEventListener('click',()=>{showCastMovie()})
-btnReturnMovieDetails.addEventListener('click',()=>{showMovieDetails()})
+btnHome[0].addEventListener('click',()=>{returnHome();});
+btnCast[1].addEventListener('click',()=>{showCastMovie();});
+btnReturnMovieDetails.addEventListener('click',()=>{showMovieDetails();});
 btnLogo.addEventListener('click',()=>{returnHome();});
 
 

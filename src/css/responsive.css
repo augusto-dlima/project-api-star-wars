@@ -1,6 +1,19 @@
+@media(max-width:1200px) {
+
+    .body .home .characters .content .container-title,
+    .movie-details .content .container-title {
+
+        width: 50%;
+
+
+    }
+}
+
+
+
 @media(max-width:1024px) {
 
-    .home{
+    .home {
         display: none;
     }
 
@@ -13,6 +26,37 @@
             padding: 0%;
         }
     }
+
+    .body .home .content .container-title .title {
+
+        color: #ffffff;
+        font-size: 25px;
+
+    }
+
+    .body .container .home .content .title-character {
+        color: #ffffff;
+        font-size: 100px;
+        padding-left: 3%;
+    }
+
+    .body .container .home .characters .content .container-content .character .title-character {
+
+        font-size: 15px;
+    }
+
+    .body .elements-cast .character {
+
+        width: 20%;
+        height: 90%;
+
+    }
+
+    .body .elements-cast .cast-elements-inline .name-character-movie-details {
+        font-size: 10px;
+    }
+
+
 
 
 }
@@ -58,9 +102,6 @@
         gap: 20px;
     }
 
-    .header .menu .navegation .item {
-        font-size: 17px;
-    }
 
     .body .container .home {
 
@@ -77,7 +118,7 @@
 
     .body .container .home .content .container-title {
 
-        width: 50%;
+        width: 25%;
 
     }
 
@@ -103,15 +144,73 @@
         border: none;
     }
 
-    .home{
+    .home {
         display: none;
     }
+
+    .body .home .characters .content .container-title,
+    .movie-details .content .container-title {
+
+        width: 70%;
+
+
+    }
+
+
+    .body .movie-details .content .container-title .title {
+        font-size: 20px;
+    }
+
+    .body .details .title {
+        font-size: 18px;
+    }
+
+    .body .movie-details .content .background-movie .details {
+
+        height: 250px;
+
+    }
+
+    .body .movie-details .content .details .details-elements .text {
+        font-size: 10px;
+    }
+
+
+    .body .movie-details .content .details-elements-inline .average {
+
+        width: 32px;
+        height: 32px;
+        font-size: 8px;
+
+    }
+
+
+    .body .elements-cast .cast-elements-inline .name-character-movie-details {
+        font-size: 8px;
+        /* text-align: center; */
+    }
+
+    .body .elements-cast .character:hover {
+        transition: 1s ease-in-out;
+        box-shadow: 0px 0px 0px 0px #ffffff;
+    }
+
+    .body .elements-cast .icon-home {
+        font-size: 15px;
+        padding: 1%;
+    }
+
+    .body .elements-cast .cast-elements-inline .icon-home {
+
+        font-size: 13px;
+    }
+
 
 }
 
 @media(max-width: 500px) {
 
-    .home{
+    .home {
         display: none;
     }
 
@@ -207,13 +306,13 @@
 
     .toggler-theme {
 
-        width: 32px;
-        height: 32px;
+        width: 48px;
+        height: 48px;
 
     }
 
     .toggler-theme .icon {
-        font-size: 18px;
+        font-size: 22px;
     }
 
 
@@ -227,22 +326,83 @@
         border-radius: 2px;
         box-shadow: 0px 1px 10px 1px #ffffff;
     }
-  
+
+    .body .container .home .content .container-content .character {
+        width: 40%;
+        padding: 2%;
+        height: 250px;
+        border-radius: 10px;
+        flex-direction: column;
+
+    }
+
+    .movie-details .content .background-movie {
+
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body .movie-details .content .background-movie .details {
+
+        width: 100%;
+        margin-top: 2%;
+        /* background: none; */
+
+        &:hover {
+            box-shadow: 0px 0px 0px 0px;
+        }
+
+    }
+
+    .body .movie-details .content .container-content .movie-section {
+        width: 100%;
+    }
+
+    .body .container .home .content .container-title {
+
+        width: 40%;
+
+    }
+
+    .body .home .characters .content .container-title,
+    .movie-details .content .container-title {
+
+        width: 100%;
+
+
+    }
+
+    .body .movie-details .content .container-title .title {
+        font-size: 15px;
+    }
+
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .body .container .home .container-content {
     flex-wrap: wrap;
 }
-
-
-
-.body .container .home .characters .content .container-content .character .title-character {
-
-    font-size: 18px;
-}
-
 
 
 .body .container .home .movies .content .container-content {
@@ -251,10 +411,6 @@
 
 .body .container .home .indications .content .container-content {
     gap: 40px;
-}
-
-.body .container .home .content .container-content .character {
-    width: 40%;
 }
 
 .home .content .container-button .btn-movie,

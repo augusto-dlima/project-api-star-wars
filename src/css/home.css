@@ -51,7 +51,7 @@
     font-size: 30px;
 }
 
-.movie-details .content .container-title .icon {
+.movie-details .content .container-title .icon{
     font-size: 30px;
     margin-top: 5px;
 
@@ -173,7 +173,7 @@
 
 }
 
-.home .characters .content .character {
+.home .characters .content .character,.elements-cast .character{
 
     display: flex;
     width: 40%;
@@ -186,6 +186,7 @@
     cursor: pointer;
 
 }
+
 
 .home .characters .content .character .image {
     width: 70px;
@@ -204,9 +205,10 @@
 
 }
 
+
 .home .characters .content .character .title-character {
     color: #ffffff;
-    font-size: 22px;
+    font-size: 16px;
     padding-left: 3%;
 }
 
@@ -254,7 +256,7 @@
 
 .movie-details .icon-home {
 
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 1%;
 
 }
