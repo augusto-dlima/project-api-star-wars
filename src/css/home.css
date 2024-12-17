@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
 .home {
     display: none;
 }
@@ -18,23 +17,14 @@
 .home .content .container-title,
 .movie-details .content .container-title {
     display: flex;
-    width: 15%;
-    justify-content: space-around;
+    width: 30%;
+    justify-content: flex-start;
     gap: 5%;
     align-items: center;
-    border-bottom: 3px solid var(--color-button-link);
     animation: visible-animation 1s ease-in-out;
     animation-timeline: view();
     animation-range: cover 0 cover 80%;
     padding-top: 3%;
-
-}
-
-.home .characters .content .container-title,
-.movie-details .content .container-title {
-   
-    width: 40%;
-
 
 }
 
@@ -51,7 +41,7 @@
     font-size: 30px;
 }
 
-.movie-details .content .container-title .icon{
+.movie-details .content .container-title .icon {
     font-size: 30px;
     margin-top: 5px;
 
@@ -61,6 +51,7 @@
 
     color: #ffffff;
     font-size: 30px;
+    font-family: redwing;
 
 }
 
@@ -118,7 +109,7 @@
     height: auto;
     animation: none;
 
-    &:hover{
+    &:hover {
 
         transition: none;
         cursor: pointer;
@@ -159,9 +150,8 @@
 
     >.container-content {
 
-        >.movie,
-        .character,
-        .starchip .title-film {
+        > .character,
+        .starchip {
 
             text-align: center;
             font-size: 13px;
@@ -173,7 +163,8 @@
 
 }
 
-.home .characters .content .character,.elements-cast .character{
+.home .characters .content .character,
+.elements-cast .character {
 
     display: flex;
     width: 40%;
@@ -237,8 +228,8 @@
 
 .home .content .container-button .btn-movie,
 .btn-character,
-.btn-starchip,
-.movie-details .icon-home,.movie-details .content .container-content .background-movie .details .details-elements .elements.movie .icon-home {
+.movie-details .icon-home,
+.movie-details .content .container-content .background-movie .details .details-elements .elements.movie .icon-home {
 
     color: #ffffff;
     cursor: pointer;
@@ -258,33 +249,5 @@
 
     font-size: 20px;
     margin-left: 1%;
-
-}
-
-@keyframes title-animation {
-
-    from {
-        opacity: 0;
-        translate: -100vw 0;
-    }
-
-    to {
-        opacity: 1;
-        translate: 0vw 0;
-    }
-
-}
-
-
-
-@keyframes visible-animation {
-
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 
 }

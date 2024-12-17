@@ -4,7 +4,6 @@
     --background-btn-toggler-hover: #00bf63;
     --background-container: url('../images/background-container.png');
     --background-section-home: url('../images/background-section-home-default.png');
-    --background-menu-mobile: #3d85c6; 
     --color-button-link: #3d85c6; 
     transition: 5ms ease-in-out;
 
@@ -16,7 +15,6 @@
     --background-btn-toggler-hover: #000000;
     --background-container: url('../images/background-container.png');
     --background-section-home: url('../images/background-section-home-green.png');
-    --background-menu-mobile: #00bf63;
     --color-button-link: #00bf63;
     transition: 5ms ease-in-out;
 
@@ -28,9 +26,7 @@
     --background-btn-toggler-hover: #3d85c6;
     --background-container: url('../images/background-container.png');
     --background-section-home: url('../images/background-section-home-red.png');
-    --background-menu-mobile: #000000;
     --color-button-link: #cc0000;
-    /* --background-menu-mobile: #cc0000; */
     transition: 5ms ease-in-out;
 
 }

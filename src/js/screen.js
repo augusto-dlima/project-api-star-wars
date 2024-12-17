@@ -152,7 +152,7 @@ function showCastMovie() {
     const elementsCast = document.getElementById('elements-cast');
     const imageCast = document.getElementsByClassName('image-cast-movie-details');
     const nameCast = document.getElementsByClassName('name-character-movie-details');
-    const sectionMovieDetails = document.getElementById('section-details');
+    const sectionMovieDetails = document.getElementById('details-elements');
     const sectionElementsInlineCast = document.getElementById('elements-cast');
 
     console.log(sectionMovieDetails);
@@ -182,8 +182,6 @@ function showCastMovie() {
 
         elementLoading.style.display = 'none';
         elementsCast.style.display = 'flex';
-        sectionMovieDetails.style.opacity='1';
-        sectionElementsInlineCast.style.opacity='1';
 
     }, 2000)
 
@@ -205,7 +203,6 @@ function showMovieDetails() {
     setTimeout(() => {
         
         elementLoading.style.display = 'none';
-        sectionMovieDetails.style.opacity='0.8';
         sectionMovieDetails.style.transition='1s ease-in-out';
         elementsMovie.style.display = 'flex';
         

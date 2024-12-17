@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     padding-left: 2%;
-    padding-right: 2%;
+    padding-right: 5%;
     align-items: center;
     border-bottom: 1px solid white;
     box-shadow: 1px 1px 15px 1px #ffffff;
@@ -59,27 +59,9 @@
 
 }
 
-
 .header .menu {
     display: flex;
-    gap: 50px;
-    padding-right: 2%;
 }
-
-.header .menu .navegation {
-
-    list-style-type: none;
-    display: flex;
-    gap: 50px;
-
-}
-
-.header .menu-mobile {
-
-    display: none;
-
-}
-
 
 .header .menu .navegation .item {
 
@@ -89,14 +71,7 @@
 
 }
 
-
 .header .logo:hover .text-logo {
     transition: 1s ease-in-out;
     opacity: 0.8;
-}
-
-.header .navegation .item:hover {
-    transition: 1s ease-in-out;
-    text-shadow: 1px 1px 10px #ffffff;
-
 }

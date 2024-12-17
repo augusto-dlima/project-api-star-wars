@@ -1,9 +1,9 @@
+  @font-face {
+      font-family: redwing-light;
+      src: url('../fonts/Redwing-Light.otf');
+  }
 
-
-    @font-face {
-        font-family: death-star;
-        src: url('../fonts/Death\ Star.otf');
-    }
-
-
-
+  @font-face {
+      font-family: redwing;
+      src: url('../fonts/Redwing-Medium.otf');
+  }

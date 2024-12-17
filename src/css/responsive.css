@@ -1,12 +1,17 @@
 @media(max-width:1200px) {
 
-    .body .home .characters .content .container-title,
-    .movie-details .content .container-title {
-
-        width: 50%;
-
-
+    .body .details .title {
+        font-size: 18px;
     }
+
+    .body .elements-cast .character .image {
+
+        width: 100px;
+        height: 100px;
+    }
+
+
+
 }
 
 
@@ -15,16 +20,6 @@
 
     .home {
         display: none;
-    }
-
-    .home .starchips .content {
-
-        padding: 0%;
-        margin: 0;
-
-        >.container-content .container-button {
-            padding: 0%;
-        }
     }
 
     .body .home .content .container-title .title {
@@ -47,8 +42,8 @@
 
     .body .elements-cast .character {
 
-        width: 20%;
-        height: 90%;
+        width: 33%;
+        height: 150px;
 
     }
 
@@ -56,7 +51,13 @@
         font-size: 10px;
     }
 
+    .body .movie-details .content .details .details-elements .text {
+        font-size: 10px;
+    }
 
+    .body .details .title {
+        font-size: 18px;
+    }
 
 
 }
@@ -98,29 +99,6 @@
         width: 200%;
     }
 
-    .header .menu .navegation {
-        gap: 20px;
-    }
-
-
-    .body .container .home {
-
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .body .container .home .content {
-        gap: 40px;
-        padding: 20px;
-    }
-
-
-    .body .container .home .content .container-title {
-
-        width: 25%;
-
-    }
 
     .body .container .home .content .container-content .character {
         width: 30%;
@@ -135,7 +113,7 @@
         width: 98%;
         height: 60%;
         display: flex;
-        /* background-color: aqua; */
+
     }
 
 
@@ -167,7 +145,7 @@
 
     .body .movie-details .content .background-movie .details {
 
-        height: 250px;
+        height: 260px;
 
     }
 
@@ -187,13 +165,8 @@
 
     .body .elements-cast .cast-elements-inline .name-character-movie-details {
         font-size: 8px;
-        /* text-align: center; */
     }
 
-    .body .elements-cast .character:hover {
-        transition: 1s ease-in-out;
-        box-shadow: 0px 0px 0px 0px #ffffff;
-    }
 
     .body .elements-cast .icon-home {
         font-size: 15px;
@@ -204,6 +177,14 @@
 
         font-size: 13px;
     }
+
+    .body .elements-cast .character .image {
+
+        width: 75px;
+        height: 75px;
+    }
+
+
 
 
 }
@@ -216,13 +197,6 @@
 
     .body {
         height: 100%;
-    }
-
-    .body .menu-mobile {
-        width: 35vw;
-        height: 100%;
-        right: 0%;
-
     }
 
     .header .logo {
@@ -251,63 +225,12 @@
 
     }
 
-    .header .menu .navegation-mobile {
-        display: flex;
-    }
-
-    .header .menu .navegation-mobile .icon-menu {
-
-        display: flex;
-        color: #ffffff;
-        cursor: pointer;
-        font-size: 35px;
-        opacity: 0.4;
-
-        &:hover {
-
-            transition: 1s ease-in-out;
-            opacity: 1;
-
-        }
-
-    }
-
-
-    .header .menu {
-        width: 35vw;
-        height: 100vh;
-        font-size: 13px;
-        position: absolute;
-        right: 0%;
-        top: 35%;
-        flex-direction: column;
-        align-items: center;
-        gap: 1px;
-
-    }
-
-
-    .header .menu .navegation {
-        font-size: 13px;
-        flex-direction: column;
-        gap: 1px;
-        opacity: 1;
-        display: none;
-
-    }
-
-    .header .menu .navegation .item {
-
-        padding-top: 20px;
-        text-align: center;
-        z-index: 1;
-
-    }
 
     .toggler-theme {
 
         width: 48px;
         height: 48px;
+        margin-right: 5%;
 
     }
 
@@ -318,7 +241,6 @@
 
     .container {
         width: 95%;
-        /* height: 100%; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -349,7 +271,6 @@
 
         width: 100%;
         margin-top: 2%;
-        /* background: none; */
 
         &:hover {
             box-shadow: 0px 0px 0px 0px;
@@ -375,13 +296,55 @@
 
     }
 
+    .body .movie-details .content .container-title {
+        width: 98%;
+
+
+    }
+
     .body .movie-details .content .container-title .title {
         font-size: 15px;
+    }
+
+    .body .details .title {
+        font-size: 15px;
+    }
+
+    .body .movie-details .content .details .details-elements .text {
+        font-size: 12px;
+    }
+
+    .body .home .content .container-content .movie {
+
+        width: 130px;
+        height: 250px;
+    }
+
+    .body .title-film{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .body .movie-details .content .background-movie .details {
+
+        height: 300px;
+
     }
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,42 @@
+@keyframes title-animation {
+
+    from {
+        opacity: 0;
+        translate: -100vw 0;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0vw 0;
+    }
+
+}
+
+@keyframes visible-animation {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes alert-theme {
+
+    from {
+
+        background-color: #ffffff;
+
+    }
+
+    to {
+
+        background-color: #ffffff;
+        color: var(--background-btn-toggler-hover);
+    }
+
+}
