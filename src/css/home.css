@@ -35,6 +35,10 @@
 
 }
 
+.body .container .home .movies .content .container-content {
+    gap: 40px;
+}
+
 .home .content .container-title .icon,
 .movie-details .content .container-title {
     color: var(--color-button-link);
@@ -60,6 +64,7 @@
 
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     padding: 10% 2% 2% 2%;
     justify-content: space-around;
     align-items: center;

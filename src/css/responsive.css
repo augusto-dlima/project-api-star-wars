@@ -10,11 +10,13 @@
         height: 100px;
     }
 
+    .body .elements-cast .character {
+
+        height: 175px;
+    }
 
 
 }
-
-
 
 @media(max-width:1024px) {
 
@@ -57,6 +59,12 @@
 
     .body .details .title {
         font-size: 18px;
+    }
+
+    .body .movie-details .content .background-movie .details {
+
+        height: 275px;
+
     }
 
 
@@ -185,6 +193,21 @@
     }
 
 
+    .body .container .home .content .container-content .character {
+        width: 170px;
+        padding: 1%;
+        height: 350px;
+        border-radius: 1px;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .body .container .home .content .container-content .character .image {
+        display: block;
+    }
+
+
 
 
 }
@@ -250,12 +273,17 @@
     }
 
     .body .container .home .content .container-content .character {
-        width: 40%;
-        padding: 2%;
-        height: 250px;
-        border-radius: 10px;
+        padding: 1%;
+        width: 150px;
+        height: 300px;
+        border-radius: 1px;
         flex-direction: column;
+        justify-content: space-around;
 
+    }
+
+    .body .container .home .content .container-content .character .image {
+        display: block;
     }
 
     .movie-details .content .background-movie {
@@ -317,11 +345,11 @@
     .body .home .content .container-content .movie {
 
         width: 130px;
-        height: 250px;
+        height: 260px;
     }
 
-    .body .title-film{
-        font-size: 10px;
+    .body .title-film {
+        font-size: 11px;
         text-align: center;
     }
 
@@ -331,53 +359,13 @@
 
     }
 
+    .body .container .home .characters .content .container-content .character .title-character {
+
+        font-size: 11px;
+    }
+
+
 
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.body .container .home .container-content {
-    flex-wrap: wrap;
-}
-
-
-.body .container .home .movies .content .container-content {
-    gap: 40px;
-}
-
-.body .container .home .indications .content .container-content {
-    gap: 40px;
-}
-
-.home .content .container-button .btn-movie,
-.btn-character,
-.btn-starchip {
-    font-size: 100px;
-}
