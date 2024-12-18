@@ -95,6 +95,4 @@ function addTheme(colorTheme) {
 }
 
 
-
-
 export { togglerTheme, getThemeLocalStorage }

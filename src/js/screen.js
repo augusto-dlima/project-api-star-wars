@@ -1,19 +1,12 @@
-import { content, btnAddMovie } from "./variables.js";
+import { btnAddMovie, sectionMovieDetails, movieImage, moviesTitle, characterImage, characterTitle, sectionHome, sectionLoading, setMovies } from "./variables.js";
 import { selectFilms } from "./service.js";
-
-const sectionMovies = document.querySelector('.movies');
-const movieImage = document.getElementsByClassName('image-film');
-const moviesTitle = document.getElementsByClassName('title-film');
-const characterImage = document.getElementsByClassName('image-character');
-const characterTitle = document.getElementsByClassName('title-character');
-const sectionHome = document.getElementsByClassName('home');
-const sectionLoading = document.getElementsByClassName('loading');
-const setMovies = document.getElementsByClassName('container-content');
 
 const movieList = JSON.parse(localStorage.getItem("movieList"));
 
 
-const setMovieList = (movieList) => {
+const setHome = (movieList) => {
+
+    const content = document.querySelector('.container');
 
     selectFilms();
 
@@ -38,22 +31,20 @@ const setMovieList = (movieList) => {
 
         sectionHome.home.style.display = 'block';
         sectionLoading[0].style.display = 'none';
-        content.style.height = '100%'
 
-    }, 3000)
+    }, 2000)
 
 
 
 }
 
-function setMovieDetails(titleMovie) {
+function movieDetails(titleMovie) {
 
-
-    const movieList = JSON.parse(localStorage.getItem("movieList"));
-
-
-
-    const sectionMovieDetails = document.getElementsByClassName('movie-details');
+    
+    sectionHome.home.style.display = 'none';
+    sectionLoading[0].style.display = 'flex';
+    
+    const elementsMovie = document.getElementById('elements-movie');
     const title = document.getElementById('movie-details-title-film');
     const backgroundMovieDetails = document.getElementById('movie-details-background-movie');
     const imageMovie = document.getElementById('movie-details-image');
@@ -66,8 +57,6 @@ function setMovieDetails(titleMovie) {
 
     let genresMovie = "";
     let average = Math.round(movie[0].voteAvarage);
-
-    console.log(average)
 
     movie[0].genre.forEach((element, index) => {
 
@@ -87,8 +76,6 @@ function setMovieDetails(titleMovie) {
 
     });
 
-    console.log(movie);
-
     let dataFormatada = new Date(movie[0].releaseData).getFullYear();
 
     title.innerHTML = `${titleMovie} - ${dataFormatada} `
@@ -100,60 +87,44 @@ function setMovieDetails(titleMovie) {
     voteAvarage.innerText = `${average} / 10`
 
 
-    console.log(`https://image.tmdb.org/t/p/original${movie[0].backdropPath}`)
-
     setTimeout(() => {
 
         sectionMovieDetails[0].style.display = 'block';
         sectionLoading[0].style.display = 'none';
-        content.style.height = '100%'
+        elementsMovie.style.display='flex';
 
-    }, 3000)
-
-
-}
-
-function movieDetails(titleMovie) {
-
-    sectionHome.home.style.display = 'none';
-    sectionLoading[0].style.display = 'flex';
-    content.style.height = '100vh'
-
-    setMovieDetails(titleMovie);
+    }, 2000)
 
 
 }
 
 function returnHome() {
 
-    const sectionMovieDetails = document.getElementsByClassName('movie-details');
+    const elementsCast = document.getElementById('elements-cast');
 
+    elementsCast.style.display = 'none';
     sectionMovieDetails[0].style.display = 'none';
-    content.style.height = '100vh'
     sectionLoading[0].style.display = 'flex';
 
     setTimeout(() => {
 
         sectionLoading[0].style.display = 'none';
-        content.style.height = '100%'
         sectionHome.home.style.display = 'block';
 
-    }, 3000)
+    }, 2000)
 
 
 }
 
 function showCastMovie() {
 
-    const movieList = JSON.parse(localStorage.getItem("movieList"));
-
+    const content = document.querySelector('.container');
     const elementsMovie = document.getElementById('elements-movie');
     const elementLoading = document.getElementById('loading-movie');
     const elementsCast = document.getElementById('elements-cast');
     const imageCast = document.getElementsByClassName('image-cast-movie-details');
     const nameCast = document.getElementsByClassName('name-character-movie-details');
     const sectionMovieDetails = document.getElementById('details-elements');
-    const sectionElementsInlineCast = document.getElementById('elements-cast');
 
     console.log(sectionMovieDetails);
 
@@ -195,25 +166,23 @@ function showMovieDetails() {
     const elementsCast = document.getElementById('elements-cast');
     const sectionMovieDetails = document.getElementById('section-details');
 
-    console.log(elementsMovie)
-
     elementsCast.style.display = 'none';
     elementLoading.style.display = 'flex';
-    
+
     setTimeout(() => {
-        
+
         elementLoading.style.display = 'none';
-        sectionMovieDetails.style.transition='1s ease-in-out';
+        sectionMovieDetails.style.transition = '1s ease-in-out';
         elementsMovie.style.display = 'flex';
-        
+
     }, 2000)
-    
+
 
 }
 
 function setMoviesHome() {
 
-    const movieList = JSON.parse(localStorage.getItem("movieList"));
+    const content = document.querySelector('.container');
 
 
     let contentMovies = setMovies[0];
@@ -226,7 +195,7 @@ function setMoviesHome() {
 
         sectionHome.home.style.display = 'none';
         sectionLoading[0].style.display = 'flex';
-        content.style.height = '100vh'
+        // content.style.height = '100%'
 
         contentMovies.innerHTML = "";
 
@@ -251,7 +220,7 @@ function setMoviesHome() {
 
         btnAddMovie[0].classList.toggle('btn-rotate')
 
-        setMovieList(movieList);
+        setHome(movieList);
 
 
 
@@ -261,7 +230,7 @@ function setMoviesHome() {
 
         sectionHome.home.style.display = 'none';
         sectionLoading[0].style.display = 'flex';
-        content.style.height = '100vh'
+        // content.style.height = '100vh'
 
 
         for (index; index < movieList.length; index++) {
@@ -285,7 +254,7 @@ function setMoviesHome() {
 
         btnAddMovie[0].classList.toggle('btn-rotate')
 
-        setMovieList(movieList);
+        setHome(movieList);
 
 
     }
@@ -294,4 +263,4 @@ function setMoviesHome() {
 }
 
 
-export { setMovieList, setMoviesHome, movieDetails, returnHome, showCastMovie, showMovieDetails }
+export { setHome, setMoviesHome, movieDetails, returnHome, showCastMovie, showMovieDetails }

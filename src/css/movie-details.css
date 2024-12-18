@@ -5,7 +5,6 @@
 
 }
 
-
 .movie-details .content .background-movie {
 
     width: 100%;
@@ -23,10 +22,7 @@
     animation-range: cover 0 cover 70%;
 }
 
-
 .movie-details .content .background-movie .details {
-
-    /* background-color: var(--color-button-link); */
     background-image: var(--background-section-home);
     width: 100%;
     height: 290px;
@@ -41,7 +37,6 @@
 
 }
 
-
 .movie-details .content .background-movie .details:hover {
 
     opacity: 0.9;
@@ -49,7 +44,6 @@
     cursor: pointer;
     box-shadow: 1px 0px 1px 1px #ffffff;
 }
-
 
 .movie-details .content .background-movie .details .details-elements .elements-movie,
 .elements-cast {
@@ -97,7 +91,6 @@
 
 }
 
-
 .movie-details .content .details-elements .details-elements-inline,
 .cast-elements-inline {
     display: flex;
@@ -135,7 +128,7 @@
   
     &:hover{
         transition: 1s ease-in-out;
-        background-color: #000000;
+        background-image: var(--background-container);
     }
 
 
@@ -154,18 +147,15 @@
     flex-direction: column;
     padding: 1.5%;
     margin: 0;
-    border-radius: 5%;
     background-image: none;
     
     &:hover{
         
-        box-shadow: 1px 1px 1px 0.5px #ffffff;
+        box-shadow: 0px 1px 0px 0px var(--color-button-link);
 
     }
 
 }
-
-
 
 .elements-cast .character .image {
 
@@ -179,7 +169,6 @@
 .elements-cast .character .image img {
     border-radius: 100%;
 }
-
 
 .btn-movie-details-back {
     width: 0;

@@ -1,5 +1,5 @@
 import { newMovie } from "./objects.js";
-import { setMovieList, movieDetails } from "./screen.js";
+import { setHome,movieDetails } from "./screen.js";
 
 let movies = [];
 
@@ -26,8 +26,6 @@ async function getDataTmdb() {
 
     json.parts.map(async (movieElement) => {
 
-      console.log(movieElement)
-
       const cast = await getCastTmdb(movieElement.id);
       const genres = await detailsMovie(movieElement.id);
 
@@ -35,16 +33,13 @@ async function getDataTmdb() {
 
       movies.push(movie);
 
-      
       if(json.parts.length === movies.length ){
         
         const moviesChronologicalOrder = setChronologicalOrder(movies);
-
-        console.log(moviesChronologicalOrder);
         
         localStorage.setItem("movieList", JSON.stringify(moviesChronologicalOrder));
 
-        setMovieList(moviesChronologicalOrder);
+        setHome(moviesChronologicalOrder);
       }
 
 
@@ -54,7 +49,7 @@ async function getDataTmdb() {
 
   else {
 
-    setMovieList(movieList);
+    setHome(movieList);
 
   }
 
