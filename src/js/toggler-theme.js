@@ -1,21 +1,7 @@
 import { theme, logoImage, logoYoda, LogoDarth, LogoDefault } from "./variables.js"
 const themeLocal = localStorage.getItem('theme');
 
-function getThemeLocalStorage() {
-
-
-    if (themeLocal === null) {
-
-        addThemeDefault()
-    }
-
-    else {
-
-        getTheme(themeLocal)
-    }
-
-
-}
+function getThemeLocalStorage() { !themeLocal ? addThemeDefault() : getTheme(themeLocal) }
 
 function addThemeDefault() {
 

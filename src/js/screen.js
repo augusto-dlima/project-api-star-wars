@@ -1,5 +1,4 @@
 import { btnAddMovie, sectionMovieDetails, movieImage, moviesTitle, characterImage, characterTitle, sectionHome, sectionLoading, setMovies } from "./variables.js";
-import { selectFilms } from "./service.js";
 
 const movieList = JSON.parse(localStorage.getItem("movieList"));
 
@@ -40,10 +39,10 @@ const setHome = (movieList) => {
 
 function movieDetails(titleMovie) {
 
-    
+
     sectionHome.home.style.display = 'none';
     sectionLoading[0].style.display = 'flex';
-    
+
     const elementsMovie = document.getElementById('elements-movie');
     const title = document.getElementById('movie-details-title-film');
     const backgroundMovieDetails = document.getElementById('movie-details-background-movie');
@@ -91,7 +90,7 @@ function movieDetails(titleMovie) {
 
         sectionMovieDetails[0].style.display = 'block';
         sectionLoading[0].style.display = 'none';
-        elementsMovie.style.display='flex';
+        elementsMovie.style.display = 'flex';
 
     }, 2000)
 
@@ -101,8 +100,10 @@ function movieDetails(titleMovie) {
 function returnHome() {
 
     const elementsCast = document.getElementById('elements-cast');
+    const sectionAllCast = document.getElementById('cast-details');
 
     elementsCast.style.display = 'none';
+    sectionAllCast.style.display = 'none';
     sectionMovieDetails[0].style.display = 'none';
     sectionLoading[0].style.display = 'flex';
 
@@ -230,7 +231,7 @@ function setMoviesHome() {
 
         sectionHome.home.style.display = 'none';
         sectionLoading[0].style.display = 'flex';
-        // content.style.height = '100vh'
+
 
 
         for (index; index < movieList.length; index++) {
@@ -263,4 +264,175 @@ function setMoviesHome() {
 }
 
 
-export { setHome, setMoviesHome, movieDetails, returnHome, showCastMovie, showMovieDetails }
+
+
+
+
+
+function addAllCast() {
+
+    setMovieList();
+    castSelectFilm();
+
+    const sectionAllCast = document.getElementById('cast-details');
+
+
+    sectionHome.home.style.display = 'none';
+    sectionLoading[0].style.display = 'flex';
+
+    setTimeout(() => {
+
+
+        sectionLoading[0].style.display = 'none';
+        sectionAllCast.style.display = 'flex';
+
+    }, 2000)
+
+}
+
+function setMovieList() {
+
+    const castMovieList = document.getElementById('cast-details-movie-list');
+
+    let itemMovie = "";
+
+
+    movieList.forEach((movie) => {
+
+        itemMovie += ` <li class="item-movie style-item">${movie.title}</li>`
+
+    })
+
+    castMovieList.innerHTML = itemMovie;
+
+}
+
+function castReturnHome() {
+
+    const sectionAllCast = document.getElementById('cast-details');
+
+    sectionAllCast.style.display = 'none';
+    sectionLoading[0].style.display = 'flex';
+
+    setTimeout(() => {
+
+
+        sectionLoading[0].style.display = 'none';
+        sectionHome.home.style.display = 'block';
+
+    }, 2000)
+
+
+
+}
+
+function selectFilms() {
+
+    const movie = document.querySelectorAll('.movie');
+
+
+    movie.forEach((Element) => {
+        Element.addEventListener('click', () => {
+            const titleFilm = Element.children[1].innerText;
+
+            movieDetails(titleFilm);
+
+
+        })
+    })
+
+}
+
+function castSelectFilm() {
+
+    resetCastDetails();
+
+    const castMovieList = document.querySelectorAll('.movie-list');
+
+    castMovieList.forEach(element => {
+        element.addEventListener('click', (event) => { setCastMovie(event.target.innerHTML) })
+
+    })
+
+}
+
+
+function setCastMovie(titleMovie) {
+
+    const castMovieList = document.querySelectorAll('.item-movie');
+
+    castMovieList.forEach(movie => {
+
+        movie.innerText === titleMovie ? movie.classList.add("item-select") : movie.classList.remove("item-select")
+
+    })
+
+
+    castMovieList.forEach((movie) => {
+
+        movie.classList.contains('item-select') ? setCast(movie.innerHTML) : ""
+
+    })
+
+
+}
+
+function setCast(titleMovie) {
+
+    const castSection = document.getElementById('cast');
+    const movie = movieList.filter(movie => movie.title === titleMovie);
+    let characters = "";
+
+    console.log(`O filme escolhido foi ${movie[0].title}`);
+    console.log(movie);
+
+    movie[0].castList.map((character) => {
+
+
+        const url = `https://image.tmdb.org/t/p/original${character.profile_path}`;
+
+        console.log(`https://image.tmdb.org/t/p/original${character.profile_path}`)
+
+        if (url != 'https://image.tmdb.org/t/p/originalnull') {
+
+            characters += `<div class="character">
+    
+                        <div class="image">
+                            <img class="cast-image" src="https://image.tmdb.org/t/p/original${character.profile_path}" alt="Sem Imagem">
+                        </div>
+                        <p class="cast-name"> ${character.name} (${character.character}) </p>
+    
+                    </div>`
+
+
+        }
+
+
+    })
+
+    castSection.innerHTML = characters;
+
+
+
+}
+
+function resetCastDetails() {
+
+    const castMovieList = document.querySelectorAll('.item-movie');
+    const castSection = document.getElementById('cast');
+
+    castSection.innerHTML = `<section id="loading-movie" class="loading cast-details-loading">
+
+                    <i class="fab fa-old-republic icon"></i>
+
+                </section>`
+
+    castMovieList.forEach(movie => {
+        movie.classList.remove("item-select")
+    })
+
+
+}
+
+
+export { setHome, setMoviesHome, movieDetails, returnHome, showCastMovie, showMovieDetails, addAllCast, castReturnHome }

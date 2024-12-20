@@ -1,5 +1,5 @@
 import { newMovie } from "./objects.js";
-import { setHome,movieDetails } from "./screen.js";
+import { setHome} from "./screen.js";
 
 let movies = [];
 
@@ -129,22 +129,5 @@ function setChronologicalOrder(movieList) {
 
 }
 
-function selectFilms(){
 
-  const movie = document.querySelectorAll('.movie');
-    
-  movie.forEach((Element)=>{
-      Element.addEventListener('click',()=>{
-
-          const titleFilm = Element.children[1].innerText;
-
-          movieDetails(titleFilm);
-
-
-      })
-  })
-
-}
-
-
-export { getDataTmdb, selectFilms }
+export { getDataTmdb }

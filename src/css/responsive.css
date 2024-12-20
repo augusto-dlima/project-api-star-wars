@@ -4,17 +4,6 @@
         font-size: 18px;
     }
 
-    .body .elements-cast .character .image {
-
-        width: 100px;
-        height: 100px;
-    }
-
-    .body .elements-cast .character {
-
-        height: 175px;
-    }
-
 
 }
 
@@ -49,12 +38,8 @@
 
     }
 
-    .body .elements-cast .cast-elements-inline .name-character-movie-details {
-        font-size: 10px;
-    }
-
     .body .movie-details .content .details .details-elements .text {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .body .details .title {
@@ -171,11 +156,6 @@
     }
 
 
-    .body .elements-cast .cast-elements-inline .name-character-movie-details {
-        font-size: 8px;
-    }
-
-
     .body .elements-cast .icon-home {
         font-size: 15px;
         padding: 1%;
@@ -184,12 +164,6 @@
     .body .elements-cast .cast-elements-inline .icon-home {
 
         font-size: 13px;
-    }
-
-    .body .elements-cast .character .image {
-
-        width: 75px;
-        height: 75px;
     }
 
 
@@ -207,8 +181,28 @@
         display: block;
     }
 
+    .cast-details .movies .movie-list .item-movie {
 
+        width: 100%;
+       
+    }
 
+    .body .cast-details .cast .character {
+
+        min-width: 200px;
+    
+    }
+
+    .body .cast-details .cast .character .cast-name {
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 5%;
+        width: 100%;
+        height: 50%;
+    }
+    
 
 }
 
@@ -310,12 +304,6 @@
         width: 100%;
     }
 
-    .body .container .home .content .container-title {
-
-        width: 40%;
-
-    }
-
     .body .home .characters .content .container-title,
     .movie-details .content .container-title {
 
@@ -324,28 +312,23 @@
 
     }
 
-    .body .movie-details .content .container-title {
-        width: 98%;
-
-
-    }
-
     .body .movie-details .content .container-title .title {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .body .details .title {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .body .movie-details .content .details .details-elements .text {
-        font-size: 12px;
+        font-size: 15px;
+        text-align: justify;
     }
 
     .body .home .content .container-content .movie {
 
-        width: 130px;
-        height: 260px;
+        width: 150px;
+        height: 280px;
     }
 
     .body .title-film {
@@ -353,19 +336,18 @@
         text-align: center;
     }
 
-    .body .movie-details .content .background-movie .details {
-
-        height: 300px;
-
-    }
 
     .body .container .home .characters .content .container-content .character .title-character {
 
         font-size: 11px;
     }
 
+    .movie-details .content .container-title {
 
+        padding: 3%;
+
+
+    }
 
 
 }
-

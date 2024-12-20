@@ -11,13 +11,14 @@
 
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
+    color: #000000;
 
 }
 
 .home .content .container-title,
 .movie-details .content .container-title {
     display: flex;
-    width: 30%;
+    width: 100%;
     justify-content: flex-start;
     gap: 5%;
     align-items: center;
@@ -36,7 +37,8 @@
 }
 
 .body .container .home .movies .content .container-content {
-    gap: 40px;
+    gap: 20px;
+
 }
 
 .home .content .container-title .icon,
@@ -169,8 +171,7 @@
 
 }
 
-.home .characters .content .character,
-.elements-cast .character {
+.home .characters .content .character{
 
     display: flex;
     width: 40%;

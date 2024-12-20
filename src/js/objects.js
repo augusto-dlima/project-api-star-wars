@@ -10,8 +10,6 @@ let movie = {
     genre:[],
     castList: []
 }
-
-
 function newMovie(element,cast,genres) {
 
     const url =  `https://image.tmdb.org/t/p/original${element.poster_path}`

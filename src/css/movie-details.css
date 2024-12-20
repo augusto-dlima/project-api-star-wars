@@ -26,8 +26,21 @@
     background-image: var(--background-section-home);
     width: 100%;
     height: 290px;
-    border-radius: 1%;
+    border-radius: 10px;
     opacity: 0.4;
+    overflow-x: auto;
+}
+
+.movie-details .content .background-movie .details::-webkit-scrollbar {
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.movie-details .content .background-movie .details::-webkit-scrollbar-thumb {
+    background-color: var(--color-button-link);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .movie-details .content .background-movie .details .details-elements {
@@ -52,7 +65,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 3%;
+    padding: 2%;
     gap: 4%;
     opacity: 1;
     cursor: auto;
@@ -68,15 +81,13 @@
 
 .movie-details .content .container-title {
 
-
     width: 100%;
     justify-content: flex-start;
     align-items: center;
-    gap: 2%;
-    padding: 0;
     margin: 5% 0% 8% 0%;
     font-size: 20px;
-    border-bottom: 3px solid var(--color-button-link);
+    
+
 }
 
 .movie-details .content .details .details-elements .text {
@@ -88,6 +99,9 @@
     color: #ffffff;
     font-size: 25px;
     font-family: redwing;
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 3px solid var(--color-button-link);
 
 }
 
@@ -125,10 +139,10 @@
     display: none;
     padding: 1%;
     position: absolute;
-  
-    &:hover{
+
+    &:hover {
         transition: 1s ease-in-out;
-        background-image: var(--background-container);
+        /* background-image: var(--background-container); */
     }
 
 
@@ -136,22 +150,24 @@
 
 .elements-cast .cast-elements-inline {
     width: 100%;
-    height: 85%;
-    padding: 2%;
+    height: 100%;
 }
 
 .elements-cast .character {
 
-    width: 25%;
-    height: 200px;
+
+    min-width: 150px;
+    height: 70%;
+    display: flex;
     flex-direction: column;
     padding: 1.5%;
-    margin: 0;
-    background-image: none;
-    
-    &:hover{
-        
-        box-shadow: 0px 1px 0px 0px var(--color-button-link);
+    margin: 1%;
+
+
+    &:hover {
+
+        cursor: pointer;
+        box-shadow: 0px 1px 0px 0px #ffffff;
 
     }
 
@@ -159,14 +175,17 @@
 
 .elements-cast .character .image {
 
-    width: 150px;
-    height: 150px;
-    padding: 5%;
     display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: flex-end;
 
 }
 
 .elements-cast .character .image img {
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
 }
 
@@ -183,8 +202,10 @@
 }
 
 .elements-cast .cast-elements-inline .name-character-movie-details {
-    font-size: 10px;
-    text-align: center;
+    font-size: 12px;
+    display: flex;
     width: 100%;
-    height: 50%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
 }
